@@ -1,0 +1,5 @@
+@import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "mixin";
+.not-boring {
+  @include animated-radio(41, 150);
+}
