@@ -5,7 +5,7 @@ built specifically to work with drupal form output, but is not specific
 USAGE
 
 The html structure required is as follows:
-
+```html
     <div class="parent-element">
         <label>Animated Radios </label>
         <div>
@@ -19,19 +19,20 @@ The html structure required is as follows:
             </div>
         </div>
     </div>
-
+```
     This is also just general good radio structure. matched input ids/label names allow you to click on the label to select the name
 
 
 in scss, include our mixin
+```scss
 @import "mixin";
-
+```
 then, call mixin inside any section similar to class parent-element above (.form-type-radios in drupal).
-
+```scss
 .parent-element {
   @include animated-radio();
 }
-
+```
 If you don't already have it, you will need to include the following compass library:
 
 @import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
@@ -39,7 +40,7 @@ If you don't already have it, you will need to include the following compass lib
 OPTIONS
 
 Available options and defaults are as follows:
-
+```scss
   @include animated-radio(
     $transition-time: 1s,
     $width: 41,
@@ -50,7 +51,7 @@ Available options and defaults are as follows:
     $leftcolor: #000000,
     $rightcolor: #ffffff
   );
-
+```
   If you need more customizeability, you may as well alter the mixin to suite your needs.
 
 
