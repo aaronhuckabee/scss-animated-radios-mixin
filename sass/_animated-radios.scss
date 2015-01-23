@@ -1,0 +1,102 @@
+@mixin animated-radio($transition-time: 1s, $width: 41, $labelwidth: 150, $border-radius: 10px, $leftbackground: #ffffff, $rightbackground: #248cf4, $leftcolor: #000000, $rightcolor: #ffffff) {
+  input[type="radio"] {
+    display: none;
+  }
+  div div {
+    display: inline-block;
+    label {
+      padding: 13px;
+      display: inline-block;
+      font-family: "Open Sans";
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      width: $width + px;
+      height: 14px;
+      margin: 0;
+      &:before {
+        content: "";
+        width: $width + 35 + px;
+        height: 40px;
+        display: block;
+        position:absolute;
+        border-radius: $border-radius;
+        background: transparent;
+        z-index: 4;
+      }
+      &:after {
+        content: "";
+        width: $width + 35 + px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        border-radius: $border-radius;
+        @include background(linear-gradient(rgba(244, 244, 244, 1) rgba(228, 228, 228, 1)));
+        @include transition(all, $transition-time);
+        top: 0;
+        z-index: 10;
+      }
+    }
+    &:first-child {
+      label {
+        border-top-left-radius:10px;
+        border-bottom-left-radius: 10px;
+        background: $leftbackground;
+        color: $leftcolor;
+        &:before{
+          right:0;
+        }
+        &:after {
+          left:0;
+        }
+      }
+      input:checked + label {
+        &:after {
+          left: $width + 19 + px;
+          z-index: 5;
+        }
+      }
+    }
+    &:nth-child(2) {
+      label {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: $rightbackground;
+        color: $rightcolor;
+        margin-left: -4px; // corrects for spacing between inline-block elements
+        &:before {
+          left: 0px;
+        }
+        &:after {
+          left: $width + 19 + px;
+        }
+      }
+      input:checked + label {
+        &:after {
+          left: 0;
+          z-index: 5;
+        }
+      }
+    }
+  }
+  > div {
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid rgba(226, 226, 226, 1);
+    border-radius: 13px;
+    position: relative;
+    height: 40px;
+  }
+  > label {
+    font-size: 14px;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    vertical-align: top;
+    text-align: left;
+    line-height: 40px;
+    text-indent: 13px;
+    width: $labelwidth + px;
+    color: black;
+  }
+}

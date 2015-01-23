@@ -1,9 +1,13 @@
-/* line 2, ../sass/_mixin.scss */
-.not-boring input {
+/* line 2, ../sass/_animated-radios.scss */
+.parent-element input[type="radio"] {
   display: none;
 }
-/* line 5, ../sass/_mixin.scss */
-.not-boring label.option {
+/* line 5, ../sass/_animated-radios.scss */
+.parent-element div div {
+  display: inline-block;
+}
+/* line 7, ../sass/_animated-radios.scss */
+.parent-element div div label {
   padding: 13px;
   display: inline-block;
   font-family: "Open Sans";
@@ -14,8 +18,8 @@
   height: 14px;
   margin: 0;
 }
-/* line 15, ../sass/_mixin.scss */
-.not-boring label.option:before {
+/* line 17, ../sass/_animated-radios.scss */
+.parent-element div div label:before {
   content: "";
   width: 76px;
   height: 40px;
@@ -25,8 +29,8 @@
   background: transparent;
   z-index: 4;
 }
-/* line 25, ../sass/_mixin.scss */
-.not-boring label.option:after {
+/* line 27, ../sass/_animated-radios.scss */
+.parent-element div div label:after {
   content: "";
   width: 76px;
   height: 40px;
@@ -45,49 +49,49 @@
   top: 0;
   z-index: 10;
 }
-/* line 39, ../sass/_mixin.scss */
-.not-boring .form-item:first-child label.option {
+/* line 41, ../sass/_animated-radios.scss */
+.parent-element div div:first-child label {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
-/* line 44, ../sass/_mixin.scss */
-.not-boring .form-item:first-child label.option:before {
+/* line 46, ../sass/_animated-radios.scss */
+.parent-element div div:first-child label:before {
   right: 0;
 }
-/* line 47, ../sass/_mixin.scss */
-.not-boring .form-item:first-child label.option:after {
+/* line 49, ../sass/_animated-radios.scss */
+.parent-element div div:first-child label:after {
   left: 0;
 }
-/* line 52, ../sass/_mixin.scss */
-.not-boring .form-item:first-child input:checked + label.option:after {
+/* line 54, ../sass/_animated-radios.scss */
+.parent-element div div:first-child input:checked + label:after {
   left: 60px;
   z-index: 5;
 }
-/* line 59, ../sass/_mixin.scss */
-.not-boring .form-item:nth-child(2) label.option {
+/* line 61, ../sass/_animated-radios.scss */
+.parent-element div div:nth-child(2) label {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background: #248cf4;
-  color: white;
+  color: #ffffff;
   margin-left: -4px;
 }
-/* line 65, ../sass/_mixin.scss */
-.not-boring .form-item:nth-child(2) label.option:before {
+/* line 67, ../sass/_animated-radios.scss */
+.parent-element div div:nth-child(2) label:before {
   left: 0px;
 }
-/* line 68, ../sass/_mixin.scss */
-.not-boring .form-item:nth-child(2) label.option:after {
+/* line 70, ../sass/_animated-radios.scss */
+.parent-element div div:nth-child(2) label:after {
   left: 60px;
 }
-/* line 73, ../sass/_mixin.scss */
-.not-boring .form-item:nth-child(2) input:checked + label.option:after {
+/* line 75, ../sass/_animated-radios.scss */
+.parent-element div div:nth-child(2) input:checked + label:after {
   left: 0;
   z-index: 5;
 }
-/* line 80, ../sass/_mixin.scss */
-.not-boring.form-type-radios .form-radios {
+/* line 82, ../sass/_animated-radios.scss */
+.parent-element > div {
   display: inline-block;
   margin-left: 20px;
   border: 1px solid #e2e2e2;
@@ -95,8 +99,8 @@
   position: relative;
   height: 40px;
 }
-/* line 88, ../sass/_mixin.scss */
-.not-boring.form-type-radios > label {
+/* line 90, ../sass/_animated-radios.scss */
+.parent-element > label {
   font-size: 14px;
   display: inline-block;
   font-family: 'Open Sans';
@@ -107,8 +111,4 @@
   text-indent: 13px;
   width: 150px;
   color: black;
-}
-/* line 101, ../sass/_mixin.scss */
-.not-boring .form-type-radio {
-  display: inline-block;
 }
